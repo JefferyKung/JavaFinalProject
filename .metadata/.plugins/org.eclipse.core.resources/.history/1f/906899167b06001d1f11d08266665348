@@ -1,0 +1,27 @@
+package databaseUtil;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class dbConnection {
+	
+    static String CONN ="jdbc:mysql://127.0.0.1:3306";
+    static String USERNAME ="root";
+    static String PASSWORD ="Naruto614!";
+
+    
+    public static Connection getConnection() {
+    	
+    
+
+		try {
+			return DriverManager.getConnection(CONN, USERNAME, PASSWORD);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+    
+    }	
+}
